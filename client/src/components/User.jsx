@@ -26,14 +26,14 @@ const User = () => {
   };
 
   return (
-    <div>
+    <div className='grid grid-cols-3'>
       {flashcards.map((flashcard) => (
-        <div key={flashcard.id} className={`flashcard ${flipped[flashcard.id] ? 'flipped' : ''}`}>
-          <div className="front" onClick={() => toggleFlip(flashcard.id)}>
-            {flashcard.question}
+        <div key={flashcard.id} className={` flashcard mb-6 bg-black border-[2px] border-gray-600 text-white rounded-xl w-[24rem] h-[10rem] ${flipped[flashcard.id] ? 'flipped' : ''}`}>
+          <div className="front text-xl font-bold" onClick={() => toggleFlip(flashcard.id)}>
+            Que.{" "}{flashcard.question}
           </div>
-          <div className="back" onClick={() => toggleFlip(flashcard.id)}>
-            {flashcard.answer}
+          <div className="back text-xl font-bold" onClick={() => toggleFlip(flashcard.id)}>
+            Ans.{" "}{flashcard.answer}
           </div>
         </div>
       ))}

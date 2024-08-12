@@ -22,12 +22,10 @@
   box-sizing: border-box;
 }
 
-.flashcard .front {
-  background-color: #fff;
-}
+
 
 .flashcard .back {
-  background-color: #f4f4f4;
+
   transform: rotateY(180deg);
 }
 
