@@ -43,7 +43,7 @@ const Admin = () => {
 
   const handleDeleteFlashcard = async (id) => {
     try {
-      await axios.delete('/admin/${id}');
+      await axios.delete(`/admin/${id}`);
       setFlashcards(flashcards.filter(card => card.id !== id));
     } catch (error) {
       console.error('Error deleting flashcard:', error);
